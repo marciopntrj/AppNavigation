@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+//Marcio Pinto
 package com.example.android.navigation
 
 import android.content.Intent
@@ -41,7 +41,7 @@ class GameWonFragment : Fragment() {
                 .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
 
         }
-        //val args = GameWonFragmentArgs.fromBundle(arguments)
+        val args = GameWonFragmentArgs.fromBundle(arguments !!)
         Toast.makeText(
             context,
             "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}",
@@ -57,7 +57,7 @@ class GameWonFragment : Fragment() {
     }
 
     private fun getShareIntent(): Intent {
-        val args = GameWonFragmentArgs.fromBundle(arguments)
+        val args = GameWonFragmentArgs.fromBundle(arguments !!)
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
             .putExtra(

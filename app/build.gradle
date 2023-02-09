@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+//Marcio Pinto
 
 apply plugin: 'com.android.application'
 
@@ -23,14 +24,14 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'androidx.navigation.safeargs'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildFeatures {
         dataBinding true
     }
     defaultConfig {
         applicationId 'com.example.android.navigation'
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 33
         vectorDrawables.useSupportLibrary = true
         versionCode 1
         versionName "1.0"
@@ -63,4 +64,5 @@ dependencies {
     // Navigation
     implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
     implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+    //implementation "com.google.android.material:material:$supportlibVersion"
 }
